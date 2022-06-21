@@ -1,0 +1,116 @@
+{
+  "category": [
+    {
+      "catName": "Football",
+      "id": 1
+    },
+    {
+      "catName": "Basketball",
+      "id": 2
+    },
+    {
+      "catName": "Accessories",
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "proName": "NIKE LUNARGATO",
+      "price": 69.99,
+      "catId": 1,
+      "image": "product-1.png"
+    },
+    {
+      "id": 2,
+      "proName": "NIKE PHANTOM GT",
+      "price": 57.99,
+      "catId": 1,
+      "image": "product-2.png"
+    },
+    {
+      "id": 3,
+      "proName": "ADIDAS X SPEEDFLOW",
+      "price": 67.99,
+      "catId": 1,
+      "image": "product-3.png"
+    },
+    {
+      "id": 4,
+      "proName": "PUMA FUTURE Z 1.1",
+      "price": 129.99,
+      "catId": 1,
+      "image": "product-4.png"
+    },
+    {
+      "id": 5,
+      "proName": "Under Armour Curry",
+      "price": 99.99,
+      "catId": 2,
+      "image": "product-5.png"
+    },
+    {
+      "id": 6,
+      "proName": "Under Armour Embiid",
+      "price": 89.99,
+      "catId": 2,
+      "image": "product-6.png"
+    },
+    {
+      "id": 7,
+      "proName": "Balance Two WXY",
+      "price": 96.99,
+      "catId": 2,
+      "image": "product-7.png"
+    },
+    {
+      "id": 8,
+      "proName": "Under Armour Curry",
+      "price": 109.99,
+      "catId": 2,
+      "image": "product-8.png"
+    },
+    {
+      "id": 9,
+      "proName": "Under Armour Flow Futr",
+      "price": 69.99,
+      "catId": 2,
+      "image": "product-9.png"
+    },
+    {
+      "id": 10,
+      "proName": "MOLTEN F5A2810-Y",
+      "price": 19.79,
+      "catId": 3,
+      "image": "product-10.png"
+    },
+    {
+      "id": 11,
+      "proName": "Backpack",
+      "price": 22.99,
+      "catId": 3,
+      "image": "product-11.png"
+    },
+    {
+      "id": 12,
+      "proName": "MOLTEN F5A4900",
+      "price": 17.99,
+      "catId": 3,
+      "image": "product-12.png"
+    },
+    {
+      "id": 13,
+      "proName": "Nike Elite Basketball",
+      "price": 9.9,
+      "catId": 3,
+      "image": "product-13.png"
+    },
+    {
+      "id": 14,
+      "proName": "BT500-FIBA",
+      "price": 22.99,
+      "catId": 3,
+      "image": "product-14.png"
+    }
+  ]
+}

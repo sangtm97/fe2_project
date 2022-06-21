@@ -1,0 +1,55 @@
+<div class="container">
+    <h3 style="padding: 20px 0;">Products</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 style="background: #cfead3;">Add New Product</h3>
+            <form #myForm="ngForm">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" style="color: #000; font-weight: bold;">product name</label>
+                    <input type="text" class="form-control" name="catName" id="exampleFormControlInput1" placeholder="Nhap ten" [(ngModel)]="objProduct.proName">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" style="color: #000; font-weight: bold;">Category Id</label>
+                    <input type="text" class="form-control" name="catId" id="exampleFormControlInput1" placeholder="Nhap ten" [(ngModel)]="objProduct.catId">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" style="color: #000; font-weight: bold;">price</label>
+                    <input type="text" class="form-control" name="price" id="exampleFormControlInput1" placeholder="Nhap ten" [(ngModel)]="objProduct.price">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" style="color: #000; font-weight: bold;">Image</label>
+                    <input type="file" class="form-control" name="image" id="exampleFormControlInput1" placeholder="Nhap ten" [(ngModel)]="objProduct.image">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" style="color: #000; font-weight: bold;">Description</label>
+                    <input type="text" class="form-control" name="desc" id="exampleFormControlInput1" placeholder="Nhap ten" [(ngModel)]="objProduct.desc">
+                </div>
+                <div class="mb-3">
+                    <button type="button" (click)="addNewProduct(myForm.value)" *ngIf="!checkAction">Add</button>
+                    <button type="button" (click)="updateProduct(myForm.value)" *ngIf="checkAction">Update</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <table class="table" >
+                <tr style="background: #cfead3;">
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor="let itemcat of dataProduct">
+                    <td>{{itemcat.id}}</td>
+                    <td>{{itemcat.proName}}</td>
+                    <td>{{itemcat.price}}</td>
+                    <td><img src="./assets/images/{{itemcat.image}}" alt="" style="width: 30%; height: 30%;"></td>
+                    <td><button type="button" class="btn btn-warning" (click)="editProduct(itemcat)">Edit</button></td>
+                    <td><button type="button" class="btn btn-danger"  (click)="deleteProduct(itemcat)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,34 @@
+<div class="container">
+    <h3 style="padding: 20px 0;">Products</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h3 style="background: #cfead3;">Add New Category</h3>
+            <form #myForm="ngForm">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" style="color: #000; font-weight: bold;" >Category name</label>
+                    <input type="text" class="form-control" name="catName" id="exampleFormControlInput1" placeholder="Category name" [(ngModel)]="objCat.catName">
+                </div>
+                <div class="mb-3">
+                    <button type="button" (click)="addNewCategory(myForm.value)" *ngIf="!checkAction">Add</button>
+                    <button type="button" (click)="updateCategory(myForm.value)" *ngIf="checkAction">Update</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <tr style="background: #cfead3;">
+                    <th>Id</th>
+                    <th>Category name</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor="let itemcat of dateCate">
+                    <td>{{itemcat.id}}</td>
+                    <td>{{itemcat.catName}}</td>
+                    <td><button type="button" class="btn btn-warning" (click)="editCat(itemcat)">Edit</button></td>
+                    <td><button type="button" class="btn btn-danger"  (click)="deleteCategory(itemcat)">Delete</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
